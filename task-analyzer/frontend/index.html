@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task Analyzer - Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="card container">
+      <header class="card-header">
+        <h1>Smart Task Analyzer</h1>
+        <p class="subtitle">Paste a JSON array of tasks, then analyze or ask for top suggestions.</p>
+      </header>
+
+      <section class="controls">
+        <label for="bulk" class="sr-only">Tasks JSON</label>
+        <textarea id="bulk" aria-label="Tasks JSON input" placeholder='Paste JSON array of tasks here (example: [{"id":1,"title":"Fix bug","effort":3}])' rows="8"></textarea>
+        <div class="actions">
+          <div class="left-actions">
+            <button id="loadSample" class="btn ghost">Load sample</button>
+            <button id="clear" class="btn ghost">Clear</button>
+          </div>
+          <div class="right-actions">
+            <button id="analyze" class="btn primary">Analyze</button>
+            <button id="suggest" class="btn">Suggest Top 3</button>
+          </div>
+        </div>
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section id="output" class="results" aria-live="polite"></section>
+      <footer class="card-footer">
+        <small>This is a demo UI for the Task Analyzer backend APIs.</small>
+      </footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
